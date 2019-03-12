@@ -1,0 +1,23 @@
+{% extends 'base.html.twig'%}
+
+{% block title %} {{parent()}} Bonjour {% endblock %}
+
+{% block body %}
+<div class="container"></div>
+<h1>{{ titre }}</h1> 
+{% if test >= 18 %} 
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nisi inventore quidem ullam ea? Reprehenderit ipsa, esse pariatur soluta asperiores cum obcaecati enim, animi adipisci ullam odio? Nesciunt, est nulla.</p>
+<b>Vous êtes majeur !</b>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium porro cum officia ex iusto fugiat est aspernatur delectus perferendis temporibus, voluptatum cumque obcaecati minus dolore illo voluptatibus nihil fuga! Maxime!.Ipsum quaerat enim et earum odit iure officiis a nobis. Dolores reiciendis numquam nesciunt aliquid, architecto quos modi maxime assumenda aliquam itaque laboriosam nisi perspiciatis impedit ipsa et culpa totam?</p>
+{% else %}
+<b>Vous êtes mineur !</b>
+{% endif %}
+<!-- <img src="images/fiat.jpg" alt=""> -->
+<img src="{{ asset('images/fiat.jpg') }}" alt="photo de voiture">
+{% for voiture in voitures %}
+
+{{ voiture | upper}}-
+
+{% endfor %}
+{% endblock %}
