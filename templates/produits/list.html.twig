@@ -1,0 +1,21 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+
+{% for produit in produits %}
+<br>
+<div class="row">
+    <div class="col-md-6"><img src="/{{produit.image }}" alt="photo" width="100"></div>
+    <div class="col-md-6">
+        <p><b>Nom : </b>{{produit.nom}}</p>
+        <p><b>Marque : </b>{{produit.marque}}</p>
+         <p><b>Prix : </b>{{produit.prix}}€</p>
+    </div>
+</div>
+<br>
+<a href="{{path('produit_show',{'id':produit.id})}}" class="btn btn-primary">Lire plus!</a>
+<!-- <a class="btn btn-primary text-right mr-6" href="{{path('produit_show', {'id':produit.id})}}">Lire plus !</a> -->
+<hr>
+{% endfor %}
+
+{% endblock %}

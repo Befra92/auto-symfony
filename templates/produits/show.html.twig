@@ -1,0 +1,21 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+<!-- {{ dump(produits) }} -->
+
+<div class="container">
+        <div class="jumbotron">
+          <h1>Détails produit</h1> 
+          <div class="row">
+                <div class="col-md-6"><img src="/{{produits.image }}" alt="photo" width="100"></div>
+                <div class="col-md-6">
+                    <p><b>Nom : </b>{{produits.nom}}</p>
+                    <p><b>Marque : </b>{{produits.marque}}</p>
+                     <p><b>Prix : </b>{{produits.prix}}€</p>
+                </div>
+            </div>
+            <h3>Description</h3>
+            <p>{{ produits.description }}</p>
+      </div>
+
+{% endblock %}
