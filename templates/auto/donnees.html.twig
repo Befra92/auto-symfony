@@ -12,6 +12,7 @@
         <th>Modèle</th>
         <th>Pays</th>
         <th>Photos</th>
+        <th>Action</th>
     </tr>
 </thead>
 <tbody>
@@ -20,8 +21,11 @@
         <td>{{voiture.id}}</td>
         <td>{{voiture.marque}}</td>
         <td>{{voiture.modele}}</td>
-        <td>{{voiture.pays}}</td>>
-        <td><img src="{{voiture.images}}" alt=""></td>
+        <td>{{voiture.pays}}</td>
+        <td><img src="{{voiture.images}}"  width="200" alt=""></td>
+        {% include'auto/modal.html.twig' %}
+        <td><a href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{voiture.id}}">Détail</a></td>
+       
     </tr>
     {% endfor %}
 </tbody>

@@ -14,7 +14,23 @@
         {% endblock %}
     </head>
     <body>
-        <div class="container">{% block body %}{% endblock %}</div>
+        
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Mon site auto</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                    <!-- <li class="active"><a href="/auto">Accueil</a></li> -->
+                    <li class="active"><a href="{{path('auto')}}">Accueil</a></li>
+                    <li><a href="{{path('exemples')}}">Exemples</a></li>
+                    <li><a href="{{path('donnees')}}">Données</a></li>
+                    <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            {% block body %}{% endblock %}</div>    
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -37,18 +37,10 @@ class AutoController extends AbstractController
      */
     public function donnees(){
         $voitures = [
-        ['id'=>1,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"https://via.placeholder.com/100.png/09f/fff
-
-        C/O https://placeholder.com/"],
-        ['id'=>2,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"https://via.placeholder.com/100.png/09f/fff
-
-        C/O https://placeholder.com/"],
-        ['id'=>3,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"https://via.placeholder.com/100.png/09f/fff
-
-        C/O https://placeholder.com/"],
-        ['id'=>4,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"https://via.placeholder.com/100.png/09f/fff
-
-        C/O https://placeholder.com/"]
+        ['id'=>1,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"images/mercedes.png"],
+        ['id'=>2,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"images/peugeot505.png"],
+        ['id'=>3,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"images/porshe.png"],
+        ['id'=>4,'marque'=>'Renault', 'modele'=>'Clio2', 'pays'=>'France',"images"=>"images/clio2.jpg"]
         ];
 
         return $this->render('auto/donnees.html.twig',
