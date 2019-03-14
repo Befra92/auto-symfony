@@ -47,4 +47,16 @@ class ProduitRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function promo($value)
+    {
+        return $this->createQueryBuilder('p')
+        // andWhere = requete preparee 
+            ->andWhere('p.prix <= :val')
+            ->setParameter('val', $value)
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }
