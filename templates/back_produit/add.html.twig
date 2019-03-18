@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form_produit 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<h2>Formulaire d'ajout</h2>
+
+{{ form_start(form_produit) }}
+<div class="col-md-6">
+    <div class="form-group">
+        <!-- {{ form_label(form_produit.nom) }} -->
+        {{ form_row(form_produit.nom,{'attr':
+        {'class':'form-control', 'placeholder':'Entrer votre nom'}}) }}
+    </div>
+
+    <div class="form-group">
+        <!-- {{ form_label(form_produit.marque) }} -->
+        {{ form_row(form_produit.marque,{'attr':
+        {'class':'form-control', 'placeholder':'Entrer votre marque'}}) }}
+    </div>
+    <div class="form-group">
+        <!-- {{ form_label(form_produit.prix) }} -->
+        {{ form_row(form_produit.prix,{'attr':
+        {'class':'form-control', 'placeholder':'Entrer votre prix'}}) }}
+    </div>
+    <div class="form-group">
+        <!-- {{ form_label(form_produit.image) }} -->
+        {{ form_row(form_produit.image,{'attr':
+        {'class':'form-control', 'placeholder':'Entrer votre image'}}) }} 
+    </div>
+    <div class="form-group">
+        <!-- {{ form_label(form_produit.description) }} -->
+        {{ form_row(form_produit.description,{'attr':
+        {'class':'form-control', 'placeholder':'Entrer votre description'}}) }}
+    </div>
+
+{{ form_end(form_produit) }}
+
+
+{% endblock %}

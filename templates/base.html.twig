@@ -30,6 +30,21 @@
                     </ul>
                 </div>
             </nav>
+            {% for message in app.flashes('success') %}
+
+            <div class="alert alert-success text-center col-md-4 block-center">
+                {{ message }}
+            </div>
+            {% endfor %}
+
+                {% for message in app.flashes('suppression') %}
+
+            <div class="alert alert-success text-center col-md-4 block-center">
+                {{ message }}
+            </div>
+
+            {% endfor %}
+
             {% block body %}{% endblock %}</div>    
         {% block javascripts %}{% endblock %}
     </body>

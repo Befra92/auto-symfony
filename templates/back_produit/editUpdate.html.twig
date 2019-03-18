@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form_editUpdate 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+{{ form_start(form_editUpdate) }}
+
+{{ form_row(form_editUpdate.nom) }}
+{{ form_row(form_editUpdate.marque) }}
+{{ form_row(form_editUpdate.prix) }}
+{{ form_row(form_editUpdate.image) }}
+{{ form_row(form_editUpdate.description) }}
+
+{{ form_end(form_editUpdate) }}
+
+{% for message in app.flashes('success') %}
+
+            <div class="alert alert-success text-center col-md-4 block-center">
+                {{ message }}
+            </div>
+
+{% endfor %}
+
+{% endblock %}
